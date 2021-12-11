@@ -153,9 +153,9 @@
 		   <?php 
 		   ?>
 			<div class="products rows" id="myUL"> 	 	
-			<?php ini_set('memory_limit', '1024M');$con=mysqli_connect("localhost","root","","emotiongift_com");// Check connection
+			<?php ini_set('memory_limit', '1024M');$con=mysqli_connect("localhost","root","","emodbnew");// Check connection
 			if (mysqli_connect_errno()) {  echo "Failed to connect to MySQL: " . mysqli_connect_error();}
-			$result = mysqli_query($con,"SELECT c.*, p.* ,d.* FROM `new_oc_product_to_category`as c inner join new_oc_product as p on (c.product_id = p.product_id) inner join new_oc_product_description as d on (d.product_id = p.product_id) where category_id = '273' order by p.product_id desc limit 0 , 5");
+			$result = mysqli_query($con,"SELECT c.*, p.* ,d.* FROM `new_oc_product_to_category`as c inner join new_oc_product as p on (c.product_id = p.product_id) inner join new_oc_product_description as d on (d.product_id = p.product_id) where category_id = '273' order by p.product_id desc");
 			while($row = mysqli_fetch_array($result)) {
 				$imagename = explode( ".jpg" , $row['image'] );
 			$ext = strtolower(pathinfo( $row['image'], PATHINFO_EXTENSION)); // Using strtolower to overcome case sensitive
@@ -193,9 +193,9 @@ $newimgname = "https://www.emotiongift.com/image/cache/".$imagename[0]."-240x200
 ini_set('memory_limit', '1024M');
  
 function getseopath($pid){
-	$con=mysqli_connect("localhost","root","","emotiongift_com");
+	$con=mysqli_connect("localhost","root","","emodbnew");
 
-//$con=mysqli_connect("emotiongift.com.mysql","emotiongift_com","K2z7gjk9","emotiongift_com");
+//$con=mysqli_connect("emotiongift.com.mysql","emodbnew","K2z7gjk9","emodbnew");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -208,9 +208,9 @@ $pathresult = mysqli_query($con,$query);
   
  return "https://www.emotiongift.com/".$rowpath['keyword'];
 }	
-$con=mysqli_connect("localhost","root","","emotiongift_com");
+$con=mysqli_connect("localhost","root","","emodbnew");
 
-//$con=mysqli_connect("emotiongift.com.mysql","emotiongift_com","K2z7gjk9","emotiongift_com");
+//$con=mysqli_connect("emotiongift.com.mysql","emodbnew","K2z7gjk9","emodbnew");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
