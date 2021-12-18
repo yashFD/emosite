@@ -183,7 +183,7 @@ $newimgname = "https://www.emotiongift.com/image/cache/".$imagename[0]."-240x200
 			<div>
 			<div class="image" itemprop="image">
 			<a href="<?=getseopath($row['product_id'])?>">
-				<img class="product__image" src="<?php echo $newimgname ; ?>" title="bharatpur christmas cakes <?php echo strip_tags($row['description']); ?>">
+				<img class="product__image" src="<?php echo $newimgname ; ?>" title="bharatpur christmas cakes <?php echo substr(strip_tags(html_entity_decode($row['description'])),0,120); ?>">
 			</a></div>
 			 
  			</div>					<h2 class="product__name" itemprop="name"><?php echo $row['name'] ?> 
@@ -259,7 +259,7 @@ $newimgname = "https://www.emotiongift.com/image/cache/".$imagename[0]."-240x200
 					<img class="product__image" src="<?php echo $newimgname ; ?>" title="<?php echo strip_tags($row['description']); ?>">
 					</a>
 					</div>
-					<h2 class="product__name" itemprop="name"><?php echo $row['name'] ?>  <span style="font-size:5px;display:none;"><?php echo substr($row['description'],0 ,100); ?>valentine </span></h2>
+					<h2 class="product__name" itemprop="name"><?php echo $row['name'] ?>  <span style="font-size:5px;display:none;"><?php echo substr(strip_tags(html_entity_decode($row['description'])),0,120); ?>valentine </span></h2>
 					 
 					<h3 class="product__price"><?php echo $row['price'] ?></h3>
 					<meta itemprop="position" content="5">
@@ -313,7 +313,7 @@ $newimgname = "https://www.emotiongift.com/image/cache/".$imagename[0]."-240x200
 					<div class="image" itemprop="image"><img class="product__image" src="<?php echo $newimgname ; ?>"  title="<?php echo strip_tags($row['description']); ?>">
 					</a>
 					</div>
-					<h2 class="product__name" itemprop="name"><?php echo $row['name'].$k; ?> <span style="font-size:5px;display:none;"><?php echo strip_tags(substr($row['description'],0 ,100)); ?> </span></h2>
+					<h2 class="product__name" itemprop="name"><?php echo $row['name'].$k; ?> <span style="font-size:5px;display:none;"><?php echo substr(strip_tags(html_entity_decode($row['description'])),0,120); ?> </span></h2>
 					 
 					<h3 class="product__price"><?php echo $row['price'] ?></h3>
 					<meta itemprop="position" content="5">

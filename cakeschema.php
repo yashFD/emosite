@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) {
 /*
 $result = mysqli_query($con,"SELECT c.city_name, s.city_name as cn, s.latitude, s.longitude, s.state FROM `emotiongift_com` as c left join statelist as s on c.city_name = s.city_name ORDER by c.city_name ASC"); 
 */
-$result = mysqli_query($con,"select * from statelist"); 
+ $result = mysqli_query($con,"select * from statelist");
  //$result = mysqli_query($con,"select * from cities");
  
  
