@@ -210,7 +210,7 @@ function countCartTotal() {
 		document.getElementById('txn_amount').value = `${cartTotal}`;
 		//document.getElementById('cartvaldollar').innerText = ` $ ${(cartTotal/51).toFixed(2)}`;;
 		//document.getElementById('cartvalinr').innerText = ` INR ${cartTotal}`;
-		document.getElementById('myButton').innerHTML = `<span> INR ${cartTotal}- </span>Proceed to Pay`;
+	//	document.getElementById('myButton').innerHTML = `<span> INR ${cartTotal}- </span>Proceed to Pay`;
 
 	 
 
