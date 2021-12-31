@@ -424,15 +424,12 @@ function searchFunction() {
     if (displayed.length === 0) {
        // console.log(displayed);
         document.getElementById("nproduct").style.display = "block";
-
         for (i = 0; i < 5; i++) {
             a = li[i].getElementsByClassName("product__name")[0];
             li[i].style.display = "";
-
-
         }
-
     }
+	$(document).scrollTop(100);
 }
  
 function cartToggle() {
