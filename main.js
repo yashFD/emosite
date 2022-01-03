@@ -31,9 +31,12 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
       name: productDOM.querySelector('.product__name').innerText,
       price: productDOM.querySelector('.product__price').innerText,
       quantity: 1,
+	 
     };
-	
+	 //alert('product added');
+    document.getElementById('alertId').classList.remove('hide')
 	$("#myModal").modal()
+	
 
     // Adding products to the cart
 
@@ -46,6 +49,7 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
       handleActionButtons(addToCartButtonDOM, product);
     }
   });
+ //  document.getElementById('alertId').classList.remove('hide');
 });
 
 // Inserting cart items and small buttons to the cart DOM
@@ -145,7 +149,7 @@ function addCartFooter() {
 
     document.querySelector('[data-action="CLEAR_CART"]').addEventListener('click', () => clearCart());
     document.querySelector('[data-action="CHECKOUT"]').addEventListener('click', () => checkout());
-	document.getElementById('checkout1').addEventListener('click', () => checkout()); 
+	// document.getElementById('checkout1').addEventListener('click', () => checkout()); 
   }
 }
 
@@ -205,7 +209,7 @@ function countCartTotal() {
 		
 		document.querySelector('[data-action="CHECKOUT"]').innerText = `  INR ${cartTotal}`;
 		
-		document.querySelector('[data-action="CHECKOUT1"]').innerText = `International cards $ ${(cartTotal/51).toFixed(2)}`;
+		//document.querySelector('[data-action="CHECKOUT1"]').innerText = `International cards $ ${(cartTotal/51).toFixed(2)}`;
 		 
 		document.getElementById('txn_amount').value = `${cartTotal}`;
 		//document.getElementById('cartvaldollar').innerText = ` $ ${(cartTotal/51).toFixed(2)}`;;

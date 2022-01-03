@@ -14,6 +14,10 @@
   font-size: 12px;
 }
 
+.hide {
+	display: none;
+}
+
 @media screen and (min-width: 600px) {
   :root {
     --base-padding: 12px;
@@ -498,6 +502,10 @@ button {
     color: #555555;
 }
 
+.alertcss {
+	text-align: center;
+}
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 body {
@@ -731,7 +739,7 @@ opacity: 1;
       height: 33px;
       font-size: 13px;
       border-radius: 18px;
-	  margin-left: 15px;
+	  margin-left: 80px;
     }
     .shopping-cart{width: 100%; top: 90px; left: 0px;}
       #total-cart-value{position:absolute;width: 120px; }

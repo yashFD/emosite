@@ -67,11 +67,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 	
 	<div class="col-md-5">
-			<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for cakes.., flower combo , valentine">
+			<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for cakes.., flower combo ,valentine">
 	</div>
-	<div class="col-md-2" style="float:left;">
+	 <div class="col-md-2"></div>
+	 
 	
-	</div>
 	<div class="col-md-3" style="float:left; margin-top: 15px;">
 		<div style="float:left;"><a href="#" class="dropdown-toggle crttext"  onmouseover="cartToggle();"> 
 		<span class="glyphicon glyphicon-shopping-cart cticon"></span> Cart<span class="caret"></span></a>
@@ -86,6 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  
          </div>
 	</div>
+	
+	
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -107,6 +109,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+  <div class="row">
+  <div class="col-md-12 alertcss">
+  <div id ="alertId" class="alert alert-success fade in hide ">
+          Product added to Cart <a href="cart.php">Go To Cart Page</a>
+        </div>
+  </div>
+  
+  
+  </div>
 </nav>
 	<main class="main-container">
     
@@ -142,6 +153,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
   
 		</div>
+		
+		
 			<h2 class="text-center">Products</h2>
 			
 			<div class="rows">
@@ -153,9 +166,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		   ?>
 		   
 			<div class="products rows" id="myUL"> 	 	
-			<?php ini_set('memory_limit', '1024M');$con=mysqli_connect("localhost","root","","emodbnew");// Check connection
+			<?php ini_set('memory_limit', '1024M');$con=mysqli_connect("localhost","root","","dbemonew");// Check connection
 			if (mysqli_connect_errno()) {  echo "Failed to connect to MySQL: " . mysqli_connect_error();}
-			$result = mysqli_query($con,"SELECT c.*, p.* ,d.* FROM `new_oc_product_to_category`as c inner join new_oc_product as p on (c.product_id = p.product_id) inner join new_oc_product_description as d on (d.product_id = p.product_id) where category_id = '273' order by p.product_id desc limit 0,5");
+			$result = mysqli_query($con,"SELECT c.*, p.* ,d.* FROM `new_oc_product_to_category`as c inner join new_oc_product as p on (c.product_id = p.product_id) inner join new_oc_product_description as d on (d.product_id = p.product_id) where category_id = '286' order by p.product_id desc limit 0,5");
 			while($row = mysqli_fetch_array($result)) {
 				$imagename = explode( ".jpg" , $row['image'] );
 			$ext = strtolower(pathinfo( $row['image'], PATHINFO_EXTENSION)); // Using strtolower to overcome case sensitive
@@ -193,9 +206,9 @@ $newimgname = "https://www.emotiongift.com/image/cache/".$imagename[0]."-240x200
 ini_set('memory_limit', '1024M');
  
 function getseopath($pid){
-	$con=mysqli_connect("localhost","root","","emodbnew");
+	$con=mysqli_connect("localhost","root","","dbemonew");
 
-//$con=mysqli_connect("emotiongift.com.mysql","emodbnew","K2z7gjk9","emodbnew");
+//$con=mysqli_connect("emotiongift.com.mysql","dbemonew","K2z7gjk9","dbemonew");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -208,9 +221,9 @@ $pathresult = mysqli_query($con,$query);
   
  return "https://www.emotiongift.com/".$rowpath['keyword'];
 }	
-$con=mysqli_connect("localhost","root","","emodbnew");
+$con=mysqli_connect("localhost","root","","dbemonew");
 
-//$con=mysqli_connect("emotiongift.com.mysql","emodbnew","K2z7gjk9","emodbnew");
+//$con=mysqli_connect("emotiongift.com.mysql","dbemonew","K2z7gjk9","dbemonew");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
