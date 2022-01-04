@@ -663,14 +663,27 @@ body{padding-top: 70px;}
 .navbar-header{margin-top: 9px;}
 #myInput:focus{border-color: #ee3a8a; outline: none;}
 
-.buttonpay{      
-  width: 100%;
+
+
+.buttonpayCart {
+	 width: 100%;
   background-color: #28b13f;
   padding: 2x 5px;
   height: 80px;
   font-size: 15px;
   border-radius: 10px;
+}	
+
+.buttonpay{      
+  width: 100%;
+  background-color: #28b13f;
+  padding: 2x 5px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
 }
+
+
 
   #total-cart-value{float: right !important;}
   .cartBtn{float: left;}
@@ -736,10 +749,11 @@ opacity: 1;
 	
     .buttonpay {
       padding: 0px 5px !important;
-      height: 80px;
+      height: 50px;
       font-size: 13px;
       border-radius: 18px;
-	  margin-left: 10px;
+	  margin-left: 80px;
+	  margin-top: -10px;
     }
     .shopping-cart{width: 100%; top: 90px; left: 0px;}
       #total-cart-value{position:absolute;width: 120px; }
@@ -752,6 +766,10 @@ opacity: 1;
 	  padding: 1px !important;
 	  font-size: 24px !important;
 	}
+	
+	.paytmImg {
+	width: 100%;
+}
 	
 	 
   }
